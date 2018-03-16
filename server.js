@@ -20,6 +20,9 @@ app.get('/pagecount', function (req, res) {
   res.send('{ pageCount: -1 }');
 });
 
+app.use('/static', express.static('public'))
+
+
 // error handling
 app.use(function(err, req, res, next){
   console.error(err.stack);
